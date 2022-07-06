@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color : #F8E8DC;
+    --text-color : #545454;
+    --button-text : #BD9191;
+}
+
+body{
+    background-image: url(img/tp206-instagramstory-23.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+}
+
+p {
+    text-align: center;
+    color: var(--text-color);
+}
+
+span {
+    margin-top: 20px;
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.btn {
+    color: var(--button-text);
+    background-color: var(--main-color);
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 200px;
+    cursor: pointer;
+}
+
+.card {
+    width: 300px;
+    height: 450px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    place-content: center;
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+    animation: fade-up 1s forwards;
+}
+
+.move {
+    animation: move forwards 1s;
+}
+
+.number {
+    font-size: 40;
+}
+
+.close {
+    animation: close 1s forwards;
+}
+.butterfly {
+    position: absolute;
+    top: -70px;
+    right: -40px;
+    transform: rotate(-20deg);
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+}
+
+@keyframes move {
+    to {
+    transform: translateY(130px);
+    }
+}
+
+@keyframes close {
+    to {
+        opacity: 0;
+    }
+}
